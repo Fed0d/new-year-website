@@ -6,26 +6,136 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/contentWrapper.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="styles/slideshow.css">
 </head>
 <body>
 <div class="container">
     <div class="header">
         <div class="header-section">
-            <div class="header-item header-logo"><a href="#"><img src="images/logo.png" alt="logo"></a></div>
-            <div class="header-item header-button"><a href="#">Поздравление</a></div>
-            <div class="header-item header-button"><a href="#">Письмо Деду Морозу</a></div>
-            <div class="header-item header-button"><a href="#">Фотогалерея</a></div>
-            <div class="header-item header-button"><a href="#">Новогодняя подборка</a></div>
+            <div class="header-item header-logo"><a href="#element1"><img src="images/logo.png" alt="logo"></a></div>
+            <div class="header-item header-button"><a href="#element2">Поздравление</a></div>
+            <div class="header-item header-button"><a href="#element3">Письмо Деду Морозу</a></div>
+            <div class="header-item header-button"><a href="#element4">Фотогалерея</a></div>
+            <div class="header-item header-button"><a href="#element5">Новогодняя подборка</a></div>
+            <div class="header-item header-button"><a href="#element6">Бонус</a></div>
         </div>
     </div>
 
     <div class="content-wrapper">
 
+        <lottie-player id="element1" src="https://lottie.host/f1fe5656-a2ea-4cfc-a0e7-e8a3cf7698b1/6VCj9unuEC.json"
+                       background="transparent" speed="0.25" style="width: 100%;" loop
+                       autoplay></lottie-player>
+
+        <h1 id="element2">Поздравление</h1>
         <div class="congrats">
-            <h1></h1>
+            <p>По снежному велению, по вьюжному хотению, по моему морозному распоряжению, желаю всем быть в этом году
+                счастливыми, здоровыми и любимыми! Пускай каждый откроет в новогоднюю ночь окно, душу и сердце и впустит
+                в свою жизнь чудеса, достаток и благополучие. Пускай каждый заберет под елкой мой подарок в виде
+                хорошего настроения и искреннего веселья. Принимайте мои снежные дедморозные поздравления, и пожелания
+                счастливого Нового года!
+            </p>
+            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_begllstz.json"
+                           background="transparent" speed="1" style="width: 25%; margin: auto" loop
+                           autoplay></lottie-player>
         </div>
 
+        <h1 id="element3">Письмо Деду Морозу</h1>
+
+        <div class="letter">
+            <form>
+                <label>От кого: </label><input required type="text">
+                <p>Кому: Деду Морозу</p>
+                <textarea required style="width: 100%; height: 200px"></textarea>
+                <button>Отправить</button>
+            </form>
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://lottie.host/45816a49-56b4-4dba-a4a8-2b22e86dbc8d/1RzUIVAgEd.json"
+                           background="transparent" speed="1" style="width: 300px; height: 300px; margin: auto;" loop
+                           autoplay></lottie-player>
+        </div>
+
+        <h1 id="element4">Фотогалерея</h1>
+
+        <div class="gallery">
+            <div class="slideshow-container">
+
+                <div class="dot-block" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+                <div class="my-slides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/img1.jpg" style="width:100%">
+                    <div class="text-slideshow">Дед Мороз</div>
+                </div>
+
+                <div class="my-slides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/img2.jpg" style="width:100%">
+                    <div class="text-slideshow">Новогодняя ёлка</div>
+                </div>
+
+                <div class="my-slides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/img3.jpg" style="width:100%">
+                    <div class="text-slideshow">Мандарины</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+            <div class="slideshow-panel">
+                <input type="number" min="1" id="timer" value="1">
+                <button onclick="timer()">Начать</button>
+                <button onclick="stopSlideshow()">Остановить</button>
+            </div>
+        </div>
+
+        <h1 id="element5">Новогодняя подборка</h1>
+
+        <div class="compilation">
+            <p>Вы наверное задаётесь вопросом, что посмотреть на Новый Год. Я постараюсь Вам помочь с выбором фильмов,
+                которые подарят тёплое новогоднее настроение.</p>
+            <h2>Клаус</h2>
+            <p>Владелец почтовой империи, чтобы научить ленивого отпрыска по имени Джеспер уму-разуму, отправляет его на
+                крайний север в город Смиренсбург. Тот должен организовать там почтовое отделение и за год обработать не
+                менее 6000 писем. Прибыв на место, парень оказывается в зоне боевых действий: два семейных клана, так уж
+                исторически сложилось, питают взаимную ненависть и свято чтут многовековую традицию при любой
+                возможности мутузить друг друга и делать пакости. Разумеется, в такой обстановке не до писем, и почтовое
+                отделение давно превратилось в курятник. Уже практически отчаявшись, Джеспер посещает лесного отшельника
+                по имени Клаус, и их знакомство положит начало удивительным событиям.</p>
+            <img src="images/claus.jpeg">
+            <h2>Ирония судьбы, или С лёгким паром!</h2>
+            <p>31 декабря пошли друзья в баню попариться, по традиции смыть с себя все плохое, чтобы встретить Новый год
+                чистыми, а «напарились» до такой степени (пивом и водкой), что отправили в Ленинград не того.</p>
+            <img src="images/ironiya.jpg">
+            <h2>Крепкий орешек</h2>
+            <p>В суперсовременном небоскребе Лос-Анджелеса полицейский Джон Макклейн ведет смертельную схватку с бандой
+                политических террористов, взявших в заложники два десятка человек, в число которых попадает и его жена.
+                Началось все с того, что парень приехал в город к жене, оказался на рождественском приеме, а кончилось
+                настоящей войной...</p>
+            <img src="images/nut.webp">
+        </div>
+
+        <h1 id="element6">Бонус</h1>
+
+        <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_usl23etb.json"
+                       background="transparent" speed="1" style="width: 300px; height: 300px; margin: auto;" loop
+                       autoplay></lottie-player>
+
+        <div class="bonus">
+            <video controls width="1000">
+                <source src="videos/Enjoykin — Москва - Ленинград.mp4">
+            </video>
+        </div>
     </div>
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/navigation.js"></script>
 </div>
 </body>
-</html>

@@ -16,7 +16,12 @@
     "url": "https://github.com/Fed0d/new-year-website/issues"
   },
   "homepage": "https://github.com/Fed0d/new-year-website#readme",
+  "dependencies": {
+    "@lottiefiles/lottie-interactivity": "^1.6.1"
+  },
   "devDependencies": {
-    "eslint": "^8.30.0"
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
