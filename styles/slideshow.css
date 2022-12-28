@@ -1,0 +1,117 @@
+* {box-sizing:border-box}
+
+.dot-block {
+    margin: 5px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.my-slides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    border: 1px black;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(164,28,0,0.8);
+}
+
+.text-slideshow {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    text-align: center;
+    width: 20%;
+    left: 40%;
+    bottom: 4px;
+    border-radius: 3px 3px 0 0;
+    transition: 0.6s ease;
+}
+
+.text-slideshow:hover {
+    background-color: rgba(164,28,0,0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(218, 31, 1);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: rgb(140, 29, 2);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slideshow-panel {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: rgba(164, 28, 0, 1);
+    text-align: center;
+}
+
+#timer {
+    width: 45px;
+    text-align: center;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.slideshow-panel button {
+    background: rgba(164, 28, 0, 1);
+    color: white;
+    font-family: 'Rubik Bubbles', cursive;
+    border-radius: 10px;
+    border-color: white;
+}
