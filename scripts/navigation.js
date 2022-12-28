@@ -1,19 +1,18 @@
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
 
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+    const href = this.getAttribute('href').substring(1);
 
-        let href = this.getAttribute('href').substring(1);
+    const scrollTarget = document.getElementById(href);
 
-        const scrollTarget = document.getElementById(href);
+    const topOffset = 120;
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
 
-        const topOffset = 120;
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset;
-
-        window.scrollBy({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth',
     });
+  });
 });
