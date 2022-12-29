@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/ --fix"
   },
   "repository": {
     "type": "git",
@@ -15,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Fed0d/new-year-website/issues"
   },
-  "homepage": "https://github.com/Fed0d/new-year-website#readme",
+  "homepage": "https://fed0d.github.io/new-year-website/",
   "dependencies": {
     "@lottiefiles/lottie-interactivity": "^1.6.1"
   },
