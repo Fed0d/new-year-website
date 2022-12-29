@@ -5,6 +5,7 @@ let curInterval;
 function timer() {
   const time = document.querySelector('#timer');
   if (time.value >= 1) {
+    periodTime = time.value;
     if (curInterval != null) {
       clearInterval(curInterval);
       curInterval = null;
@@ -25,12 +26,7 @@ function stopSlideshow() {
 }
 
 function plusSlides(n) {
-
   showSlide(activeSlideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlide(activeSlideIndex = n - 1);
 }
 
 function showSlide(n) {
